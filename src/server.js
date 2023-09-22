@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 
-const routes = require("./routes");
+const routes = require('./routes');
 
-require("./database/index")
+require('./database/index');
 
 const port = 3333;
 
@@ -11,4 +11,4 @@ app.use(express.json());
 
 app.use(routes);
 
-app.listen(port,() => console.log(`Server runnig on ${port}`));
+app.listen(port, () => console.log(`Server runnig on ${port}`));

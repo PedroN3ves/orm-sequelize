@@ -22,4 +22,12 @@ module.exports = {
 
     return res.json(user);
   },
+
+  async delete(req, res) {
+    const { id } = req.params;
+
+    const user = await User.destroy({ where: { id } });
+
+    return res.json(user);
+  },
 };
